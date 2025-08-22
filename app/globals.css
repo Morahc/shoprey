@@ -42,6 +42,16 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  --color-gray-50: var(--gray-50);
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+  --color-gray-400: var(--gray-400);
+  --color-gray-500: var(--gray-500);
+  --color-gray-700: var(--gray-700);
+  --color-gray-800: var(--gray-800);
+  --color-gray-900: var(--gray-900);
 }
 
 :root {
@@ -50,7 +60,7 @@
   --card-foreground: oklch(0.147 0.004 49.25);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.147 0.004 49.25);
-  --primary: oklch(0.216 0.006 56.043);
+  --primary: #00B207;
   --primary-foreground: oklch(0.985 0.001 106.423);
   --secondary: oklch(0.97 0.001 106.424);
   --secondary-foreground: oklch(0.216 0.006 56.043);
@@ -59,7 +69,7 @@
   --accent: oklch(0.97 0.001 106.424);
   --accent-foreground: oklch(0.216 0.006 56.043);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.923 0.003 48.717);
+  --border: #EDEDED;
   --input: oklch(0.923 0.003 48.717);
   --ring: oklch(0.709 0.01 56.259);
   --chart-1: oklch(0.646 0.222 41.116);
@@ -77,6 +87,16 @@
   --sidebar-ring: oklch(0.709 0.01 56.259);
   --background: oklch(1 0 0);
   --foreground: oklch(0.147 0.004 49.25);
+
+  --gray-50: #F2F2F2;
+  --gray-100: #E5E5E5;
+  --gray-200: #CCCCCC;
+  --gray-300: #B3B3B3;
+  --gray-400: #999999;
+  --gray-500: #808080;
+  --gray-700: #4D4D4D;
+  --gray-800: #333333;
+  --gray-900: #1A1A1A;
 }
 
 .dark {
@@ -119,5 +139,45 @@
   }
   body {
     @apply bg-background text-foreground font-poppins;
+  }
+  h1 {
+    @apply text-[40px]
+  }
+  h2 {
+    @apply text-[32px]
+  }
+  h3 {
+    @apply text-2xl
+  }
+  h4 {
+    @apply text-xl;
+  }
+  h5 {
+    @apply text-base
+  }
+  p {
+    @apply text-sm
+  }
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  @media (width >= theme(--breakpoint-sm)) {
+    max-width: theme(--breakpoint-sm)
+  }
+  @media (width >= theme(--breakpoint-md)) {
+    max-width: theme(--breakpoint-md);
+    padding-inline: 0rem;
+  }
+  @media (width >= theme(--breakpoint-lg)) {
+    max-width: theme(--breakpoint-lg)
+  }
+  @media (width >= theme(--breakpoint-xl)) {
+    max-width: theme(--breakpoint-xl)
+  }
+  @media (width >= theme(--breakpoint-2xl)) {
+    max-width: theme(--breakpoint-2xl)
   }
 }
