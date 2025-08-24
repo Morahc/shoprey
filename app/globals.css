@@ -141,10 +141,10 @@
     @apply bg-background text-foreground font-poppins;
   }
   h1 {
-    @apply text-[40px]
+    @apply text-[28px] lg:text-[40px]
   }
   h2 {
-    @apply text-[32px]
+    @apply text-2xl lg:text-[32px]
   }
   h3 {
     @apply text-2xl
@@ -156,7 +156,7 @@
     @apply text-base
   }
   p {
-    @apply text-sm
+    @apply text-xs lg:text-sm
   }
 }
 
